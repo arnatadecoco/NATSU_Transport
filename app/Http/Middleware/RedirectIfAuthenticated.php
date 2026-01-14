@@ -6,7 +6,6 @@ use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Log;
 
 class RedirectIfAuthenticated
 {
@@ -15,14 +14,21 @@ class RedirectIfAuthenticated
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
-     * @param  string|null  ...$guards
+     * @param  \string|null  ...$guards
      * @return mixed
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
         $guards = empty($guards) ? [null] : $guards;
+
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
+                // LOGIC BARU: Cek jika dia Admin (1)
+                if (Auth::user()->is_admin == 1) {
+                    return redirect()->route('root'); // Sesuaikan dengan nama route dashboard admin kamu
+                }
+
+                // Jika bukan admin, baru lempar ke Home biasa
                 return redirect(RouteServiceProvider::HOME);
             }
         }
