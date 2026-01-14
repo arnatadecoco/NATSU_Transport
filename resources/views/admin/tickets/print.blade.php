@@ -54,7 +54,7 @@
             <div class="ticket-header">
                 <div>
                     <div class="airline-name">
-                        {{ $ticket->flight->airline->name }} ({{ $ticket->flight->plane->name }})
+                        {{ $ticket->flight->airline->name }} ({{ $ticket->flight->plane->code}}/{{ $ticket->flight->plane->name }})
                     </div>
                     <span class="badge bg-primary">E-Boarding Pass</span>
                 </div>
