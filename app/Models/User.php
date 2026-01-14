@@ -10,7 +10,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 class User extends Authenticatable implements HasMedia
 {
-    use  Notifiable,  SoftDeletes, InteractsWithMedia;
+    use Notifiable, SoftDeletes, InteractsWithMedia;
 
     /**
      * The attributes that are mass assignable.
@@ -36,6 +36,7 @@ class User extends Authenticatable implements HasMedia
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_admin' => 'integer', // INI PENAMBAHANNYA: Supaya nilai 1 di database terbaca benar sebagai angka
     ];
 
     public function getCreatedAtAttribute($value)
