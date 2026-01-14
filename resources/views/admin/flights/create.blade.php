@@ -1,19 +1,19 @@
 @extends('layouts.master')
 
 @section('title')
-  @lang('translation.add_resource', ['resource' => __('attributes.flight')])
+  Tambahkan Perjalanan
 @endsection
 
 @section('content')
   @component('components.breadcrumb')
     @slot('li_1')
-      @lang('translation.flight.flight')
+      Tambahakan Perjalanan
     @endslot
     @slot('li_2')
       {{ route('flights.index') }}
     @endslot
     @slot('title')
-      @lang('translation.add_resource', ['resource' => __('attributes.flight')])
+      Tambahakan perjalanan
     @endslot
   @endcomponent
 
@@ -36,7 +36,7 @@
               <div class="col-8">
 
                 <div class="row mb-4">
-                  <label for="airline" class="col-sm-3 col-form-label">@lang('translation.flight.airline')</label>
+                  <label for="airline" class="col-sm-3 col-form-label">PO Bus</label>
                   <div class="col-sm-9">
                     <select class="form-control select2" id="airline" name="airline_id" required>
                       <option value="">@lang('translation.none')</option>
@@ -55,7 +55,7 @@
 
                 {{-- planes --}}
                 <div class="row mb-4">
-                  <label for="plane" class="col-sm-3 col-form-label">@lang('translation.flight.plane')</label>
+                  <label for="plane" class="col-sm-3 col-form-label">Nama Bus</label>
                   <div class="col-sm-9">
                     <select class="form-control select2" id="plane" name="plane_id" required></select>
                     <div class="valid-feedback">
@@ -72,8 +72,8 @@
                   <label for="loan_limit" class="col-sm-3 col-form-label">@lang('translation.flight.time')</label>
                   <div class="col-sm-9">
                     <div class="input-daterange input-group" id="datepicker" data-date-format="yyyy-m-d" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker'>
-                      <input type="date" class="form-control filter-input" id="departure" name="departure" placeholder="@lang('translation.flight.departure')" required />
-                      <input type="date" class="form-control filter-input" id="arrival" name="arrival" placeholder="@lang('translation.flight.arrival')" required />
+                      <input type="date" class="form-control filter-input" id="departure" name="departure" placeholder="@lang('Terminal Keberangkatan')" required />
+                      <input type="date" class="form-control filter-input" id="arrival" name="arrival" placeholder="@lang('Terminal Tujuan')" required />
 
                       <div class="valid-feedback">
                         @lang('validation.good')
@@ -134,7 +134,7 @@
                   <label for="price" class="col-sm-3 col-form-label">@lang('translation.flight.price')</label>
                   <div class="col-sm-9">
                     <div class="input-group">
-                      <div class="input-group-text">$</div>
+                      <div class="input-group-text">Rp</div>
                       <input type="number" class="form-control" id="price" name="price" value="{{ old('price') }}" required>
                       <div class="valid-feedback">
                         @lang('validation.good')
