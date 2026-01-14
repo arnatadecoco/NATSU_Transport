@@ -159,12 +159,12 @@ mix.copyDirectory("./node_modules/bootstrap-editable/img", folder.dist_assets + 
 //var out = folder.dist_assets + "images";
 //mix.copyDirectory(folder.src + "images", out);
 
-mix.sass('resources/scss/bootstrap.scss', folder.dist_assets + "css").minify(folder.dist_assets + "css/bootstrap.css");
-mix.sass('resources/scss/icons.scss', folder.dist_assets + "css").options({ processCssUrls: false }).minify(folder.dist_assets + "css/icons.css");
-mix.sass('resources/scss/app.scss', folder.dist_assets + "css").options({ processCssUrls: false }).minify(folder.dist_assets + "css/app.css");
+//mix.sass('resources/scss/bootstrap.scss', folder.dist_assets + "css").minify(folder.dist_assets + "css/bootstrap.css");
+//mix.sass('resources/scss/icons.scss', folder.dist_assets + "css").options({ processCssUrls: false }).minify(folder.dist_assets + "css/icons.css");
+//mix.sass('resources/scss/app.scss', folder.dist_assets + "css").options({ processCssUrls: false }).minify(folder.dist_assets + "css/app.css");
 
-mix.sass('resources/scss/bootstrap-dark.scss', folder.dist_assets + "css").minify(folder.dist_assets + "css/bootstrap-dark.css");
-mix.sass('resources/scss/app-dark.scss', folder.dist_assets + "css").options({ processCssUrls: false }).minify(folder.dist_assets + "css/app-dark.css");
+//mix.sass('resources/scss/bootstrap-dark.scss', folder.dist_assets + "css").minify(folder.dist_assets + "css/bootstrap-dark.css");
+//mix.sass('resources/scss/app-dark.scss', folder.dist_assets + "css").options({ processCssUrls: false }).minify(folder.dist_assets + "css/app-dark.css");
 
 mix.webpackConfig({
     plugins: [
@@ -234,12 +234,12 @@ var app_pages_assets = {
     ]
 };
 
-var out = folder.dist_assets + "js/";
-lodash(app_pages_assets).forEach(function(assets, type) {
-    for (let i = 0; i < assets.length; ++i) {
-        mix.js(assets[i], out + "pages");
-    };
-});
+//var out = folder.dist_assets + "js/";
+//lodash(app_pages_assets).forEach(function(assets, type) {
+//    for (let i = 0; i < assets.length; ++i) {
+//        mix.js(assets[i], out + "pages");
+//    };
+//});
 
 //mix.combine('resources/css/main.css', folder.dist_assets + "css/main.css");
 //mix.combine('resources/js/main.js', folder.dist_assets + "js/main.js");
