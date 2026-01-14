@@ -152,8 +152,8 @@ mix.copyDirectory("./node_modules/leaflet/dist/images", folder.dist_assets + "/l
 mix.copyDirectory("./node_modules/bootstrap-editable/img", folder.dist_assets + "/libs/img");
 
 // copy all fonts
-var out = folder.dist_assets + "fonts";
-mix.copyDirectory(folder.src + "fonts", out);
+//var out = folder.dist_assets + "fonts";
+//mix.copyDirectory(folder.src + "fonts", out);
 
 // copy all images
 var out = folder.dist_assets + "images";
