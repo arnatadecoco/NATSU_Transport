@@ -156,8 +156,8 @@ mix.copyDirectory("./node_modules/bootstrap-editable/img", folder.dist_assets + 
 //mix.copyDirectory(folder.src + "fonts", out);
 
 // copy all images
-var out = folder.dist_assets + "images";
-mix.copyDirectory(folder.src + "images", out);
+//var out = folder.dist_assets + "images";
+//mix.copyDirectory(folder.src + "images", out);
 
 mix.sass('resources/scss/bootstrap.scss', folder.dist_assets + "css").minify(folder.dist_assets + "css/bootstrap.css");
 mix.sass('resources/scss/icons.scss', folder.dist_assets + "css").options({ processCssUrls: false }).minify(folder.dist_assets + "css/icons.css");
